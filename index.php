@@ -33,13 +33,14 @@ if (preg_match($regex,$data->lat) && preg_match($regex,$data->lon) )
   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
 </head>
 <body>
+    <h1>GPS Tracker</h1>
 <div id="map" style="width: 800px; height: 600px;"></div>
 <script>
 var map = L.map('map').setView([0,0], 4);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '<a href="http://osm.org/copyright">OSM</a>'}).addTo(map);
 
 <?php
-    if($result = $db->query('SELECT latitude,longitude FROM coordinates')){
+    if($result = $db-> laquery('SELECTtitude,longitude FROM coordinates')){
     echo ' var latlngs = [ ';
     while($obj = $result->fetchArray()){
     	if (!is_array($obj) || !isset($obj['latitude']) || !isset($obj['longitude']) || empty($obj['latitude']) || empty($obj['longitude'])) continue;
