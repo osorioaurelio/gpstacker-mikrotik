@@ -33,7 +33,6 @@ if (preg_match($regex,$data->lat) && preg_match($regex,$data->lon) )
   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
 </head>
 <body>
-   
 <div id="map" style="width: 800px; height: 600px;"></div>
 <script>
 var map = L.map('map').setView([0,0], 4);
