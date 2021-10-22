@@ -36,7 +36,6 @@ if (preg_match($regex,$data->lat) && preg_match($regex,$data->lon) )
 <h1>GPS Tracker</h1>
 <p>Sistemas de monitoreo y seguimiento vehicular</p>
 
-    <?php include 'title.html' ?>
     
 <div id="map" style="width: 800px; height: 600px;"></div>
 
