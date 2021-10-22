@@ -39,7 +39,7 @@ var map = L.map('map').setView([0,0], 4);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '<a href="http://osm.org/copyright">OSM</a>'}).addTo(map);
 
 <?php
-    if($result = $db-> laquery('SELECTtitude,longitude FROM coordinates')){
+    if($result = $db->query('SELECT latitude,longitude FROM coordinates')){
     echo ' var latlngs = [ ';
     while($obj = $result->fetchArray()){
     	if (!is_array($obj) || !isset($obj['latitude']) || !isset($obj['longitude']) || empty($obj['latitude']) || empty($obj['longitude'])) continue;
