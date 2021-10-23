@@ -29,6 +29,7 @@ if (preg_match($regex,$data->lat) && preg_match($regex,$data->lon) )
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" >
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
 </head>
@@ -38,6 +39,7 @@ if (preg_match($regex,$data->lat) && preg_match($regex,$data->lon) )
 
     
 <div id="map" style="width: 800px; height: 600px;"></div>
+
 
 
 <script>
@@ -59,5 +61,10 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '<a href="h
 var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
 map.fitBounds(polyline.getBounds());
 </script>
+
+<script>
+    $(document).ready(function() {
+        $('#list').DataTable();
+    } );
 </body>
 </html>
